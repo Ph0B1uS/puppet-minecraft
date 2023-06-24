@@ -1,7 +1,13 @@
+# @summary A short summary of the purpose of this class
+#
+# A description of what this class does
+#
+# @example
+#   include minecraft::properties
 define minecraft::plugin (
-  $source,
-  $plugin_name  = $title,
-  $ensure       = present
+  Any $source,
+  String[1] $plugin_name  = $title,
+  Any $ensure       = present
 ) {
   if $plugin_name =~ /^.*\.jar$/ {
     fail("minecraft plugin title ${plugin_name} must not end in '.jar'")
