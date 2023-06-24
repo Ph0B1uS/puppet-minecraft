@@ -5,7 +5,7 @@
 # @example
 #   include minecraft::properties
 define minecraft::plugin (
-  Any $source,
+  String[1] $source,
   String[1] $plugin_name  = $title,
   Any $ensure       = present
 ) {
