@@ -1,8 +1,5 @@
-# @summary A short summary of the purpose of this class
+# @summary Manage the server properies file
 #
-# A description of what this class does
-#
-# @example
 define minecraft::server_setting {
   file { $title :
     ensure  => file,

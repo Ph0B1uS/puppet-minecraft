@@ -1,8 +1,5 @@
-# @summary A short summary of the purpose of this class
+# @summary Set up the service file for the server
 #
-# A description of what this class does
-#
-# @example
 class minecraft::service {
   file { 'minecraft_init':
     ensure  => file,

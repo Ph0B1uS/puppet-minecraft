@@ -1,8 +1,10 @@
-# @summary A short summary of the purpose of this class
+# @summary Manage plugins
 #
-# A description of what this class does
-#
-# @example
+# @param source
+# @param plugin_name
+#    The name of the plugin
+# @param ensure
+#    What to do with the resource, defaults to present
 #   include minecraft::properties
 define minecraft::plugin (
   String[1] $source,

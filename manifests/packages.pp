@@ -1,8 +1,5 @@
-# @summary A short summary of the purpose of this class
+# @summary Manages java and screen packages
 #
-# A description of what this class does
-#
-# @example
 #   include minecraft::properties
 class minecraft::packages {
   if $minecraft::manage_java {

@@ -1,8 +1,5 @@
-# @summary A short summary of the purpose of this class
+# @summary Manage the user and groups responsible for running the server
 #
-# A description of what this class does
-#
-# @example
 class minecraft::user {
   group { $minecraft::group:
     ensure => present,
