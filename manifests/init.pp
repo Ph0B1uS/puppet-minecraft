@@ -177,15 +177,15 @@ class minecraft (
   Integer $heap_size            = '1024',           # The maximum Java heap size in MB
   Integer $heap_start           = '256',            # The initial Java heap size in MB
   Array $plugins              = {},               # Hash of plugins
-  Array $ops                  = undef,
-  Array $banned_players       = undef,
-  Array $banned_ips           = undef,
-  Array $white_list_players   = undef,
+  Array $ops                  = null,
+  Array $banned_players       = null,
+  Array $banned_ips           = null,
+  Array $white_list_players   = null,
 
   # The following are server.properties attributes, see
   # https://minecraft.gamepedia.com/Server.properties for information
   # Empty strings are represented as empty in templates, unlike undef
-  String[1] $generator_settings   = undef,
+  String[1] $generator_settings   = null,
   Integer $op_permisison_level  = 4,
   Boolean $allow_nether         = true,
   String[1] $level_name           = 'world',
@@ -195,7 +195,7 @@ class minecraft (
   Integer $server_port          = 25565,
   String[1] $level_type           = 'DEFAULT',
   Boolean $enable_rcon          = false,
-  String $rcon_password        = undef,
+  String $rcon_password        = null,
   Integer $rcon_port            = 25575,
   Boolean $force_gamemode       = false,
   Integer $level_seed           = '',
@@ -207,7 +207,7 @@ class minecraft (
   Boolean $snooper_enabled      = true,
   Boolean $hardcore             = false,
   Boolean $online_mode          = true,
-  String[1] $resource_pack        = undef,
+  String[1] $resource_pack        = null,
   Boolean $pvp                  = true,
   Integer $difficulty           = 1,
   Boolean $enable_command_block = false,
