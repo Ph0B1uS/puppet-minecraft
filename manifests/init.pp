@@ -86,7 +86,7 @@
 #    Sets a world seed for the player's world, as in Singleplayer. The world generates with a random seed if left blank.
 #
 # @param server_ip
-#    Specifies the server ip
+#    Specifies the server ip, defaults to listen on all ips avaliable to the server
 #
 # @param max_build_height
 #    Was removed in v 1.17
