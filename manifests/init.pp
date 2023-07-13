@@ -198,7 +198,7 @@ class minecraft (
   String $rcon_password        = null,
   Integer $rcon_port            = 25575,
   Boolean $force_gamemode       = false,
-  Integer $level_seed           = null,
+  String[1] $level_seed           = null,
   Stdlib::IP::Address $server_ip            = '0.0.0.0',
   Integer $max_build_height     = 256,
   Boolean $spawn_npcs           = true,
