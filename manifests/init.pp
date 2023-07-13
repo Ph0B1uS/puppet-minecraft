@@ -176,7 +176,7 @@ class minecraft (
   Boolean $manage_java          = true,             # Manage the JRE package
   Integer $heap_size            = 1024,           # The maximum Java heap size in MB
   Integer $heap_start           = 256,            # The initial Java heap size in MB
-  Array $plugins              = [],               # Hash of plugins
+  Hash $plugins              = {},               # Hash of plugins
   Array $ops                  = [],
   Array $banned_players       = [],
   Array $banned_ips           = [],
