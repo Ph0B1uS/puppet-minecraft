@@ -174,13 +174,13 @@ class minecraft (
   String[1] $source               = '1.7.4',          # Minecraft (semvar) or CraftBukkit ('recommended', 'beta', or 'dev'), or direct source (URL for wget)
   Boolean $autostart            = true,             # Start service at boot
   Boolean $manage_java          = true,             # Manage the JRE package
-  Integer $heap_size            = '1024',           # The maximum Java heap size in MB
-  Integer $heap_start           = '256',            # The initial Java heap size in MB
-  Array $plugins              = {},               # Hash of plugins
-  Array $ops                  = null,
-  Array $banned_players       = null,
-  Array $banned_ips           = null,
-  Array $white_list_players   = null,
+  Integer $heap_size            = 1024,           # The maximum Java heap size in MB
+  Integer $heap_start           = 256,            # The initial Java heap size in MB
+  Array $plugins              = [],               # Hash of plugins
+  Array $ops                  = [],
+  Array $banned_players       = [],
+  Array $banned_ips           = [],
+  Array $white_list_players   = [],
 
   # The following are server.properties attributes, see
   # https://minecraft.gamepedia.com/Server.properties for information
@@ -198,8 +198,8 @@ class minecraft (
   String $rcon_password        = null,
   Integer $rcon_port            = 25575,
   Boolean $force_gamemode       = false,
-  Integer $level_seed           = '',
-  Stdlib::IP::Address $server_ip            = '',
+  Integer $level_seed           = null,
+  Stdlib::IP::Address $server_ip            = '0.0.0.0',
   Integer $max_build_height     = 256,
   Boolean $spawn_npcs           = true,
   Boolean $white_list           = false,
