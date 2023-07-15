@@ -16,7 +16,8 @@ improvements including: version selection, CraftBukkit support, a
 plugin resource, and settings managed via templates. It is released
 under the original Apache License, Version 2.0.
 
-This module has been tested on Ubuntu Server 12.04.4 with Puppet 3.8.7.
+This module has been tested on Ubuntu Server 12.04.4 with Puppet 3.8.7 and on
+Debian 12 with puppet 8.1.0.
 
 ## Usage
 
