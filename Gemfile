@@ -30,12 +30,13 @@ group :development do
   gem "pry", '~> 0.10',                            require: false
   gem "simplecov-console", '~> 0.5',               require: false
   gem "puppet-debugger", '~> 1.0',                 require: false
-  gem "rubocop", '= 1.6.1',                        require: false
+  gem "rubocop", '= 1.22.3',                       require: false
   gem "rubocop-performance", '= 1.9.1',            require: false
-  gem "rubocop-rspec", '= 2.0.1',                  require: false
+  gem "rubocop-rspec", '= 2.5',                    require: false
   gem "rb-readline", '= 0.5.5',                    require: false, platforms: [:mswin, :mingw, :x64_mingw]
 end
 group :system_tests do
+  gem "voxpupuli-test"
   gem "puppet_litmus", '< 1.0.0', require: false, platforms: [:ruby, :x64_mingw]
   gem "serverspec", '~> 2.41',    require: false
 end
