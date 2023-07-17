@@ -3,6 +3,8 @@
 require 'spec_helper'
 
 describe 'minecraft::source' do
+  let(:pre_condition) { 'include minecraft' }
+
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }

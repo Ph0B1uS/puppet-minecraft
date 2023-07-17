@@ -1,21 +1,23 @@
 # @summary A class to manage the settings for the server
 #
+# @param minecraft::ops
+#   a list of ops
 class minecraft::properties {
   minecraft::server_setting { 'server.properties': }
 
-  if $minecraft::ops != undef {
+  if defined('$minecraft::ops') {
     minecraft::server_setting { 'ops.txt': }
   }
 
-  if $minecraft::banned_players != undef {
+  if defined('$minecraft::banned_players') != undef {
     minecraft::server_setting { 'banned-players.txt': }
   }
 
-  if $minecraft::banned_ips != undef {
+  if defined('$minecraft::banned_ips') != undef {
     minecraft::server_setting { 'banned-ips.txt': }
   }
 
-  if $minecraft::white_list_players != undef {
+  if defined('$minecraft::white_list_players') != undef {
     minecraft::server_setting { 'white-list.txt': }
   }
 }
