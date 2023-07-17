@@ -1,4 +1,4 @@
-# @summary Manage the server properies file
+# @summary Manage the server properties file
 #
 define minecraft::server_setting {
   file { $title :
