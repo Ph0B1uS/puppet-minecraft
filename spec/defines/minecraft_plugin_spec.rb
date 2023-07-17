@@ -12,14 +12,13 @@ describe 'minecraft::plugin', type: :define do
       let :facts do
         facts
       end
-      let :params do
-        {
-          source: 'http://dev.bukkit.org/media/files/757/982/dynmap-1.9.1.jar'
-        }
-      end
-
       let :title do
         'dynmap'
+      end
+      let :params do
+        {
+          source: 'https://mediafilez.forgecdn.net/files/4632/182/Dynmap-3.6-spigot.jar'
+        }
       end
 
       it { is_expected.to compile.with_all_deps }
@@ -28,7 +27,7 @@ describe 'minecraft::plugin', type: :define do
         is_expected.to contain_archive('dynmap').with(ensure: 'present',
                                                       path: '/opt/minecraft/plugins/dynmap.jar',
                                                       user: 'minecraft',
-                                                      source: 'http://dev.bukkit.org/media/files/757/982/dynmap-1.9.1.jar')
+                                                      source: 'https://mediafilez.forgecdn.net/files/4632/182/Dynmap-3.6-spigot.jar')
       end
 
       it 'depends on plugin dir' do
