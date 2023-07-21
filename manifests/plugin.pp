@@ -9,7 +9,7 @@
 define minecraft::plugin (
   String[1] $source,
   String[1] $plugin_name  = $title,
-  Any $ensure       = present
+  Any $ensure = present
 ) {
   if $plugin_name =~ /^.*\.jar$/ {
     fail("minecraft plugin title ${plugin_name} must not end in '.jar'")

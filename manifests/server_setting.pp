@@ -1,10 +1,14 @@
 # @summary Manage the server properties file
 #
-define minecraft::server_setting {
+# @param content
+#   used by unit tests
+define minecraft::server_setting (
+  String $content = template("minecraft/${title}.erb"),
+) {
   file { $title :
     ensure  => file,
     path    => "${minecraft::install_dir}/${title}",
-    content => template("minecraft/${title}.erb"),
+    content => $content,
     owner   => $minecraft::user,
     group   => $minecraft::group,
     mode    => '0664',

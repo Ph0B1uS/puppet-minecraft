@@ -3,16 +3,14 @@
 require 'spec_helper'
 
 describe 'minecraft::source' do
-  let(:pre_condition) { 'include minecraft' }
+  let :pre_condition do
+    'include ::minecraft'
+  end
 
   on_supported_os.each do |os, facts|
     context "on #{os}" do
       let :facts do
         facts
-      end
-
-      let :pre_condition do
-        'include ::minecraft'
       end
 
       context 'with defaults' do
