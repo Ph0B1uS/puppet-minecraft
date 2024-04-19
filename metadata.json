@@ -10,7 +10,7 @@
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 4.13.1 < 9.0.0"
+      "version_requirement": ">= 4.13.1 < 10.0.0"
     },
     {
       "name": "puppetlabs-java",
@@ -32,13 +32,24 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
+        "20.04",
         "22.04"
       ]
     },
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "8"
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7",
+        "8",
+        "9"
       ]
     }
   ],
@@ -47,8 +58,5 @@
       "name": "puppet",
       "version_requirement": ">= 7.0.0 < 9.0.0"
     }
-  ],
-  "pdk-version": "2.7.1",
-  "template-url": "pdk-default#2.7.4",
-  "template-ref": "tags/2.7.4-0-g58edf57"
+  ]
 }
